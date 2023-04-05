@@ -47,8 +47,6 @@ app.post('/auth', bodyParser(), async (req, res) => {
       const { name } = JSON.parse(req.body.user);
       user.name = name;
     }
-
-    res.json(user);
     res.redirect(`https://sample-react-app-vercel-testing.vercel.app/${user.email}`)
   } catch (ex) {
     console.error(ex);
