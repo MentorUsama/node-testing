@@ -15,7 +15,7 @@ let auth = new AppleAuth(
     "client_id": "com.tandemexperiences.login.app",
     "team_id": "RW6MKM37W3",
     "key_id": "Z9TRQF8RF3",
-    "redirect_uri": "https://sample-react-app-vercel-testing.vercel.app/",
+    "redirect_uri": "https://testing-nodejs-987j.onrender.com/auth",
     "scope": "name email",
   },
   key.toString(),
