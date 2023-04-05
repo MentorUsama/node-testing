@@ -62,7 +62,7 @@ app.get('/refresh', async (req, res) => {
     res.json(accessToken);
   } catch (ex) {
     console.error(ex);
-    res.send('An error occurred!');
+    res.send('An error occurred!'+ex.message);
   }
 });
 
