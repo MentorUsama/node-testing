@@ -49,6 +49,7 @@ app.post('/auth', bodyParser(), async (req, res) => {
     }
 
     res.json(user);
+    res.redirect(`https://sample-react-app-vercel-testing.vercel.app/${user.email}`)
   } catch (ex) {
     console.error(ex);
     res.send('An error occurred!');
