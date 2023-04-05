@@ -47,7 +47,9 @@ app.post('/auth', bodyParser(), async (req, res) => {
       const { name } = JSON.parse(req.body.user);
       user.name = name;
     }
-    res.redirect(`https://sample-react-app-vercel-testing.vercel.app/${user.email}`)
+    const access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInBhc3N3b3JkIjoiJGFyZ29uMmkkdj0xOSRtPTQwOTYsdD0zLHA9MSQ3SnFHKzAyUXJyQm9sbU9SSWh0K2NnJHl4UTFETjQxbDdLK2ZsN3NkVVhtYWJJNm5LcXc2eFRja1Awa1dFRmJ5QUUiLCJpYXQiOjE2ODA3MzExMTYsImV4cCI6MTY4MzE1MDMxNn0.bNt_TfMLpgx4j7gcH_PpIhdHFjugqDy1g236g-xsoLo"
+    const access_encode = encodeURIComponent(access_token)
+    res.redirect(`https://sample-react-app-vercel-testing.vercel.app/?token=${access_encode}`)
   } catch (ex) {
     console.error(ex);
     res.send('An error occurred!');
